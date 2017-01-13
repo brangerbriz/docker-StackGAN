@@ -21,7 +21,9 @@ RUN /bin/bash install-deps
 RUN ./install.sh 
 # above may need yes
 
+# copy local files to image 
+COPY download_data.sh /
+COPY download_models.sh /
 WORKDIR /StackGAN
-
 
 CMD echo "container started"
