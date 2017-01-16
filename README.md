@@ -1,0 +1,2 @@
+# StackGAN Docker Image
+Dockerized version of the wonderfu [StackGAN implementation code](https://github.com/hanzhanggit/StackGAN). Work in progress at the moment, should be complete by January 20th 2017. 
