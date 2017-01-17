@@ -10,7 +10,7 @@ RUN git clone https://github.com/hanzhanggit/StackGAN.git
 ENV PYTHONPATH /root/StackGAN
 
 # Install StackGAN dependencies
-RUN pip install prettytensor progressbar python-dateutil easydict pandas torchfile
+RUN pip install prettytensor progressbar python-dateutil easydict pandas torchfile pillow pyyaml
 
 # copy local files to image 
 COPY download_data.sh /root/

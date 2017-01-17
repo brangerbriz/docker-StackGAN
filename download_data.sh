@@ -25,7 +25,7 @@ cd ../flowers
 echo "Downloading flower images..."
 download "https://github.com/brangerbriz/docker-StackGAN/releases/download/datasets/102flowers.zip"
 
-cd ..
+cd ../..
 echo "Preprocessing bird images..."
 python "misc/preprocess_birds.py"
 echo "Preprocessing flower images..."
