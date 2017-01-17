@@ -19,7 +19,7 @@ Upon your first login, which should occur immediately if you ran the above comma
 
 __Note__: Because the `root` docker user created these files, these files will likely be owned by `root` on your host machine. You can easily transfer ownership to your user by running the following on the StackGAN/ directory from your host machine:
 
-```
+```bash
 sudo chown -R $USER:$USER StackGAN/
 ```
 
@@ -27,7 +27,7 @@ sudo chown -R $USER:$USER StackGAN/
 
 This container comes with the required apt and pip dependencies as well as the cloned StackGAN repos only. To actually use the example code or train the GANs using your own data you must install Torch and download the data and pre-trained models. I've provided three scripts inside of `/root` to easily do this.
 
-```
+```bash
 # Download and build Torch from source, this can take a while
 ./install_torch.sh
 
