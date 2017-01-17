@@ -1,0 +1,2 @@
+# If the /root/StackGAN directory is empty, clone StackGAN into it
+test "$(ls -A /root/StackGAN 2>/dev/null)" || echo "git clone https://github.com/hanzhanggit/StackGAN.git"
