@@ -1,5 +1,5 @@
 #!/bin/bash
 
-git clone https://github.com/torch/distro.git /torch --recursive
-cd /torch
-./install-deps
+git clone https://github.com/torch/distro.git /root/torch --recursive
+cd /root/torch
+./install-deps && ./install.sh
