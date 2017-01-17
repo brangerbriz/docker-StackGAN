@@ -5,7 +5,7 @@ Dockerized version of the wonderful [StackGAN implementation code](https://githu
 
 This container was built using the Tensorflow 12.1 GPU image and works with Nvidia-docker. The only requirement is that you have Nvidia-docker and the appropriate Nvidia drivers installed on your machine. If you would like to try and run this container in a CPU-only environment see the section at the bottom of this README.
 
-Pull and run the container with the following commands:
+Pull and run the container with the following commands (optionally you could just execute the `run.sh` file):
 
 ```bash
 # create an empy StackGAN/ folder that will be mounted/shared with the container and 
@@ -23,7 +23,7 @@ __Note__: Because the `root` docker user created these files, these files will l
 sudo chown -R $USER:$USER StackGAN/
 ```
 
-## Optional Installs/Downloads
+## Optional Installs and Downloads
 
 This container comes with the required apt and pip dependencies as well as the cloned StackGAN repos only. To actually use the example code or train the GANs using your own data you must install Torch and download the data and pre-trained models. I've provided three scripts inside of `/root` to easily do this.
 
@@ -40,3 +40,14 @@ This container comes with the required apt and pip dependencies as well as the c
 # WARNING: This downloads ~3.7GB of files
 ./download_models.sh
 ```
+
+## CPU Only
+
+We haven't tried a CPU-only install, but in theory it should work. All you would need to do is change a file and rebuild the image using the `Dockerfile` from this repo.
+
+First, change the first line of the `Dockerfile` to `FROM tensorflow/tensorflow:0.12.1`.
+Next rebuild the image with:
+```bash
+docker build -t brannondorsey/docker-stackgan:latest .
+```
+Finally change `nvidia-docker` to `docker` in `run.sh`. You should now be able to run the container by executing `run.sh`. If you get this to work, or have any trouble, let us know and we will see if we can help :)
