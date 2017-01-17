@@ -3,7 +3,7 @@ MAINTAINER Brannon Dorsey <brannon@brannondorsey.com>
 
 WORKDIR /root
 RUN apt-get update
-RUN apt-get install -y git wget
+RUN apt-get install -y git wget ttf-freefont
 
 ENV PYTHONPATH /root/StackGAN
 
