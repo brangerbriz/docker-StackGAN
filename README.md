@@ -51,6 +51,8 @@ Once you've installed Torch and downloaded the data/models you should be all set
 sh demo/birds_demo.sh
 ```
 
+You should now find generated bird images generated from example sentences located in `StackGAN/examples/`.
+
 ## CPU Only
 
 We haven't tried a CPU-only install, but in theory it should work. All you would need to do is change a file and rebuild the image using the `Dockerfile` from this repo.
