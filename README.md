@@ -43,6 +43,14 @@ This container comes with the required `apt` and `pip` dependencies as well as t
 ./download_models.sh
 ```
 
+## Running the Examples
+
+Once you've installed Torch and downloaded the data/models you should be all set to generate your own bird/flower images using the demos provided. From inside the docker container, you should be able to generate new bird samples from the `StackGAN/` directory with:
+
+```
+sh demo/birds_demo.sh
+```
+
 ## CPU Only
 
 We haven't tried a CPU-only install, but in theory it should work. All you would need to do is change a file and rebuild the image using the `Dockerfile` from this repo.
