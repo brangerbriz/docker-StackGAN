@@ -30,7 +30,9 @@ sudo chown -R $USER:$USER StackGAN/
 This container comes with the required `apt` and `pip` dependencies as well as the cloned StackGAN repos only. To actually use the example code or train the GANs using your own data you must install Torch and download the data and pre-trained models. I've provided three scripts inside of `/root` to easily do this.
 
 ```bash
-# Download and build Torch from source, this can take a while
+# Download and build Torch from source, this can take a while.
+# Make sure to type 'yes' (don't just press enter) to the prompt 
+# at the end of this install process to correctly add Torch to you PATH.
 ./install_torch.sh
 
 # Download the example birds and flower data used in the paper
