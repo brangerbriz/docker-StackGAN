@@ -8,7 +8,7 @@ RUN apt-get install -y git wget ttf-freefont
 ENV PYTHONPATH /root/StackGAN
 
 # Install StackGAN dependencies
-RUN pip install prettytensor progressbar python-dateutil \
+RUN pip install prettytensor==0.7.3 progressbar python-dateutil \
     easydict pandas torchfile pillow pyyaml ipdb
 
 # copy local files to image 
